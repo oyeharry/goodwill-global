@@ -78,6 +78,13 @@ export const boardOfDirectors: Person[] = [
     role: 'Director',
     profession: 'Medical Office Assistant',
     photo: nehaPhoto,
+    vision: {
+      quote:
+        'My mission is to serve humanity beyond boundaries, respect every individual, protect the vulnerable, and spread peace through my actions.',
+      paragraphs: [
+        'My vision is to build a future where every heart feels safe, every voice is respected, and every soul has the freedom to live in peace and happiness.',
+      ],
+    },
   },
   {
     slug: 'sahil-thakur',

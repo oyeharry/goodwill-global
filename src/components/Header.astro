@@ -6,7 +6,7 @@ import { navigation } from '@/data/site';
 
 <header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-5">
   <div
-    class="mx-auto max-w-6xl rounded-2xl border border-brand-900/10 bg-white/95 shadow-lg shadow-brand-950/10 backdrop-blur"
+    class="mx-auto max-w-6xl rounded-2xl border border-brand-900/10 bg-white shadow-lg shadow-brand-950/10"
   >
     <div class="flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <Logo />
@@ -52,7 +52,7 @@ import { navigation } from '@/data/site';
         <button
           type="button"
           id="menu-toggle"
-          class="rounded-full p-2 text-brand-950 hover:bg-brand-50 lg:hidden"
+          class="rounded-full p-2.5 text-brand-950 hover:bg-brand-50 lg:hidden"
           aria-controls="mobile-menu"
           aria-expanded="false"
           aria-label="Toggle menu"
@@ -63,18 +63,18 @@ import { navigation } from '@/data/site';
     </div>
 
     <nav id="mobile-menu" class="hidden border-t border-brand-900/10 px-4 py-4 lg:hidden" aria-label="Mobile">
-      <ul class="max-h-[70vh] space-y-4 overflow-y-auto">
+      <ul class="max-h-[70vh] space-y-2 overflow-y-auto">
         {
           navigation.map((item) => (
             <li>
-              <a href={item.href} class="block font-semibold text-brand-950">
+              <a href={item.href} class="block py-2.5 font-semibold text-brand-950">
                 {item.label}
               </a>
               {item.children && (
-                <ul class="mt-2 space-y-2 border-l border-brand-200 pl-4">
+                <ul class="border-l border-brand-200 pl-4">
                   {item.children.map((child) => (
                     <li>
-                      <a href={child.href} class="block text-sm text-ink/75">
+                      <a href={child.href} class="block py-3 text-sm text-ink/75">
                         {child.label}
                       </a>
                     </li>
@@ -84,7 +84,7 @@ import { navigation } from '@/data/site';
             </li>
           ))
         }
-        <li><a href="#get-involved" class="btn btn-primary w-full">Get involved</a></li>
+        <li class="pt-2"><a href="#get-involved" class="btn btn-primary w-full">Get involved</a></li>
       </ul>
     </nav>
   </div>

@@ -7,6 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: process.env.SITE_URL || 'https://oyeharry.github.io',
   base: process.env.BASE_PATH || '/',
+  // One-page site: inlining the CSS removes a render-blocking request.
+  build: { inlineStylesheets: 'always' },
   vite: {
     plugins: [tailwindcss()],
   },

@@ -20,6 +20,7 @@
   --color-accent-400: #f2a94e;
   --color-accent-500: #e8912d;
   --color-accent-600: #cf7618;
+  --color-accent-700: #9a520b; /* text on light backgrounds (AA contrast) */
 
   --color-cream: #faf7f1;
   --color-ink: #1c2524;

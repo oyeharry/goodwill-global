@@ -5,12 +5,16 @@ import { initials } from '@/utils/paths';
 
 interface Props {
   person: Person;
-  /** Rendered width in px, used to size the optimised image. */
+  /** Largest rendered width in px; smaller variants are generated automatically. */
   size?: number;
+  /** Responsive `sizes` hint so phones download only what they display. Defaults to a fixed `size`. */
+  sizes?: string;
   class?: string;
 }
 
-const { person, size = 400, class: className } = Astro.props;
+const { person, size = 400, sizes = `${size}px`, class: className } = Astro.props;
+// 1x / 2x / 3x of the display size covers every phone pixel density without oversized downloads.
+const widths = [...new Set([size / 2, size, size * 2].map(Math.round))];
 ---
 
 <div class:list={['overflow-hidden bg-linear-to-br from-brand-700 to-brand-950', className]}>
@@ -21,8 +25,8 @@ const { person, size = 400, class: className } = Astro.props;
         alt={`Portrait of ${person.name}`}
         width={size}
         height={Math.round(size * 1.2)}
-        widths={[size, size * 2]}
-        sizes={`${size}px`}
+        widths={widths}
+        sizes={sizes}
         fit="cover"
         position="top"
         class="h-full w-full object-cover object-top"

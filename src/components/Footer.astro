@@ -15,11 +15,11 @@ const year = new Date().getFullYear();
 
     <nav aria-label="Footer">
       <h2 class="text-xs font-semibold tracking-[0.2em] text-accent-300 uppercase">Explore</h2>
-      <ul class="mt-4 space-y-2.5 text-sm text-white/75">
+      <ul class="mt-2 text-sm text-white/75">
         {
           navigation.map((item) => (
             <li>
-              <a href={item.href} class="hover:text-white">
+              <a href={item.href} class="inline-block py-3 hover:text-white">
                 {item.label}
               </a>
             </li>

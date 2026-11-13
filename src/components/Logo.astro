@@ -1,6 +1,4 @@
 ---
-import { site } from '@/data/site';
-
 interface Props {
   /** Use on dark backgrounds. */
   light?: boolean;
@@ -9,7 +7,7 @@ interface Props {
 const { light = false } = Astro.props;
 ---
 
-<a href="#top" class="flex items-center gap-3" aria-label={`${site.name} — home`}>
+<a href="#top" class="flex items-center gap-3">
   <svg viewBox="0 0 48 48" class="h-10 w-10 shrink-0" aria-hidden="true">
     <circle cx="24" cy="24" r="22" class={light ? 'fill-white/10' : 'fill-brand-800'}></circle>
     <path

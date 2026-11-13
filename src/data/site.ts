@@ -12,10 +12,8 @@ export const site = {
     postalCode: 'L6R 0T1',
     country: 'Canada',
   },
-  // TODO: confirm — the number supplied has too many digits for a Canadian phone number.
-  phone: '+1624-721-68006',
-  // TODO: add an official contact email, e.g. 'info@yourdomain.org'.
-  email: '',
+  phone: '+1 (647) 216-8006',
+  email: 'goodwillglobal8@gmail.com',
 } as const;
 
 export interface NavLink {

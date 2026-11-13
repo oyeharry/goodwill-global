@@ -1,0 +1,32 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  align?: 'left' | 'center';
+  /** Use on dark backgrounds. */
+  light?: boolean;
+}
+
+const { eyebrow, title, lead, align = 'left', light = false } = Astro.props;
+---
+
+<div class:list={['max-w-2xl', align === 'center' && 'mx-auto text-center']}>
+  <p
+    class:list={[
+      'text-xs font-semibold tracking-[0.22em] uppercase',
+      light ? 'text-accent-300' : 'text-accent-700',
+    ]}
+  >
+    {eyebrow}
+  </p>
+  <h2
+    class:list={[
+      'mt-3 font-display text-3xl leading-tight font-semibold text-balance sm:text-4xl',
+      light ? 'text-white' : 'text-brand-950',
+    ]}
+  >
+    {title}
+  </h2>
+  {lead && <p class:list={['mt-4 text-lg', light ? 'text-white/75' : 'text-ink/70']}>{lead}</p>}
+</div>

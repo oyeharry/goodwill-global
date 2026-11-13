@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import type { Person } from '@/data/leadership';
+import { initials } from '@/utils/paths';
+
+interface Props {
+  person: Person;
+  /** Largest rendered width in px; smaller variants are generated automatically. */
+  size?: number;
+  /** Responsive `sizes` hint so phones download only what they display. Defaults to a fixed `size`. */
+  sizes?: string;
+  class?: string;
+}
+
+const { person, size = 400, sizes = `${size}px`, class: className } = Astro.props;
+// 1x / 2x / 3x of the display size covers every phone pixel density without oversized downloads.
+const widths = [...new Set([size / 2, size, size * 2].map(Math.round))];
+---
+
+<div class:list={['overflow-hidden bg-linear-to-br from-brand-700 to-brand-950', className]}>
+  {
+    person.photo ? (
+      <Image
+        src={person.photo}
+        alt={`Portrait of ${person.name}`}
+        width={size}
+        height={Math.round(size * 1.2)}
+        widths={widths}
+        sizes={sizes}
+        fit="cover"
+        position="top"
+        class="h-full w-full object-cover object-top"
+      />
+    ) : (
+      <div class="flex h-full w-full items-center justify-center" aria-hidden="true">
+        <span class="font-display text-5xl font-semibold text-white/85">{initials(person.name)}</span>
+      </div>
+    )
+  }
+</div>

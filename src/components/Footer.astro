@@ -1,0 +1,44 @@
+---
+import Logo from '@/components/Logo.astro';
+import { navigation, site } from '@/data/site';
+
+const { address } = site;
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-brand-950 text-white">
+  <div class="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
+    <div>
+      <Logo light />
+      <p class="mt-5 max-w-xs text-sm leading-relaxed text-white/65">{site.description}</p>
+    </div>
+
+    <nav aria-label="Footer">
+      <h2 class="text-xs font-semibold tracking-[0.2em] text-accent-300 uppercase">Explore</h2>
+      <ul class="mt-2 text-sm text-white/75">
+        {
+          navigation.map((item) => (
+            <li>
+              <a href={item.href} class="inline-block py-3 hover:text-white">
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="text-xs font-semibold tracking-[0.2em] text-accent-300 uppercase">Visit</h2>
+      <address class="mt-4 text-sm leading-relaxed text-white/75 not-italic">
+        {address.street}<br />
+        {address.city}, {address.region} {address.postalCode}<br />
+        {address.country}
+      </address>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <p class="container-page py-6 text-xs text-white/50">© {year} {site.name}. All rights reserved.</p>
+  </div>
+</footer>

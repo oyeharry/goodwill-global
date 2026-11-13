@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/fraunces';
+
+/* Design tokens — change the brand here and the whole site follows. */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+
+  --color-brand-50: #eef8f6;
+  --color-brand-100: #d9efec;
+  --color-brand-200: #b3ddd8;
+  --color-brand-600: #1a8080;
+  --color-brand-700: #136767;
+  --color-brand-800: #0f4f4f;
+  --color-brand-900: #0b3b3c;
+  --color-brand-950: #06282a;
+
+  --color-accent-300: #f7c688;
+  --color-accent-400: #f2a94e;
+  --color-accent-500: #e8912d;
+  --color-accent-600: #cf7618;
+  --color-accent-700: #9a520b; /* text on light backgrounds (AA contrast) */
+
+  --color-cream: #faf7f1;
+  --color-ink: #1c2524;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-500;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section {
+    @apply py-20 sm:py-28;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition;
+  }
+
+  .btn-primary {
+    @apply bg-accent-500 text-brand-950 hover:bg-accent-400;
+  }
+
+  .btn-outline-light {
+    @apply border border-white/40 text-white hover:bg-white/10;
+  }
+
+  .card {
+    @apply rounded-3xl border border-brand-900/10 bg-white p-7 shadow-sm;
+  }
+}

@@ -100,12 +100,8 @@ export const founderMessage = {
     'Together, through deliberate kindness and courageous leadership, we will turn our vision into a living reality.',
 };
 
-/** Short excerpts from our members' personal vision statements. */
-export const voices = [
-  'Education and opportunity come with a responsibility to give back to society.',
-  'Until we wipe away the tears of the person standing at the very end of the line, no progress holds real value.',
-  'Caring for people begins with understanding their lives.',
-];
+/** Shown alongside the directors' own quotes; its author is not yet confirmed. */
+export const memberQuote = 'Education and opportunity come with a responsibility to give back to society.';
 
 export const getInvolved = {
   title: 'Goodwill grows when it is shared.',

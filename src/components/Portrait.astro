@@ -21,6 +21,8 @@ const { person, size = 400, class: className } = Astro.props;
         alt={`Portrait of ${person.name}`}
         width={size}
         height={Math.round(size * 1.2)}
+        widths={[size, size * 2]}
+        sizes={`${size}px`}
         fit="cover"
         position="top"
         class="h-full w-full object-cover object-top"

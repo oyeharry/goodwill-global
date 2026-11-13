@@ -34,3 +34,19 @@ const groups = [
     }
   </div>
 </section>
+
+<script>
+  // Native <dialog> wiring for the "Read vision" pop-ups.
+  document.querySelectorAll<HTMLElement>('[data-dialog-open]').forEach((button) => {
+    const dialog = document.getElementById(button.dataset.dialogOpen ?? '') as HTMLDialogElement | null;
+    button.addEventListener('click', () => dialog?.showModal());
+  });
+
+  document.querySelectorAll('dialog').forEach((dialog) => {
+    dialog.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      // Close on the close button or a click on the backdrop.
+      if (target === dialog || target.closest('[data-dialog-close]')) dialog.close();
+    });
+  });
+</script>

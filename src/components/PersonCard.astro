@@ -1,5 +1,7 @@
 ---
+import Icon from '@/components/Icon.astro';
 import Portrait from '@/components/Portrait.astro';
+import VisionDialog from '@/components/VisionDialog.astro';
 import type { Person } from '@/data/leadership';
 
 interface Props {
@@ -9,10 +11,23 @@ interface Props {
 const { person } = Astro.props;
 ---
 
-<li class="overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm">
+<li class="flex flex-col overflow-hidden rounded-3xl border border-brand-900/10 bg-white shadow-sm">
   <Portrait person={person} class="aspect-[5/6]" />
-  <div class="p-5">
+  <div class="flex flex-1 flex-col p-5">
     <h4 class="font-display text-lg leading-snug font-semibold text-brand-950">{person.name}</h4>
     <p class="mt-1 text-sm text-accent-600">{person.role}</p>
+    {person.profession && <p class="mt-1 text-xs text-ink/60">{person.profession}</p>}
+    {
+      person.vision && (
+        <button
+          type="button"
+          data-dialog-open={`vision-${person.slug}`}
+          class="mt-auto inline-flex cursor-pointer items-center gap-1.5 pt-4 text-sm font-semibold text-brand-700 hover:text-brand-900"
+        >
+          Read vision <Icon name="arrow" class="h-4 w-4" />
+        </button>
+      )
+    }
   </div>
+  {person.vision && <VisionDialog person={person} />}
 </li>

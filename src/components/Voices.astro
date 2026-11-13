@@ -1,6 +1,13 @@
 ---
+import Portrait from '@/components/Portrait.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
-import { voices } from '@/data/content';
+import { memberQuote } from '@/data/content';
+import { everyone } from '@/data/leadership';
+
+const voices = [
+  ...everyone.filter((person) => person.vision).map((person) => ({ quote: person.vision!.quote, person })),
+  { quote: memberQuote, person: undefined },
+];
 ---
 
 <section class="section bg-brand-900">
@@ -9,12 +16,21 @@ import { voices } from '@/data/content';
 
     <ul class="mt-12 grid gap-5 md:grid-cols-3">
       {
-        voices.map((quote) => (
-          <li class="rounded-3xl bg-white/5 p-8">
+        voices.map(({ quote, person }) => (
+          <li class="flex flex-col rounded-3xl bg-white/5 p-8">
             <span class="font-display text-5xl leading-none text-accent-400" aria-hidden="true">
               “
             </span>
             <blockquote class="mt-2 font-display text-xl leading-snug text-white">{quote}</blockquote>
+            {person && (
+              <div class="mt-auto flex items-center gap-3 pt-7">
+                <Portrait person={person} size={96} class="h-11 w-11 shrink-0 rounded-full [&_span]:text-sm" />
+                <p class="text-sm leading-tight text-white">
+                  {person.name}
+                  <span class="block text-white/60">{person.role}</span>
+                </p>
+              </div>
+            )}
           </li>
         ))
       }

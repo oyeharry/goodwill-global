@@ -2,6 +2,7 @@ import type { ImageMetadata } from 'astro';
 import karanpreetPhoto from '@/assets/team/karanpreet-kaur.jpg';
 import nehaPhoto from '@/assets/team/neha-rameshbhai-patel.jpg';
 import rakeshPhoto from '@/assets/team/rakesh-kumar.jpg';
+import sahilPhoto from '@/assets/team/sahil-thakur.jpg';
 import sunilPhoto from '@/assets/team/sunil-kumar-thakur.jpg';
 
 export interface PersonalVision {
@@ -78,8 +79,20 @@ export const boardOfDirectors: Person[] = [
     profession: 'Medical Office Assistant',
     photo: nehaPhoto,
   },
-  // TODO: confirm Sahil's portrait (one photo is still in src/assets/team/unassigned/).
-  { slug: 'sahil-thakur', name: 'Sahil Thakur', role: 'Director' },
+  {
+    slug: 'sahil-thakur',
+    name: 'Sahil Thakur',
+    role: 'Director',
+    photo: sahilPhoto,
+    vision: {
+      quote: 'Education and opportunity come with a responsibility to give back to society.',
+      paragraphs: [
+        'My vision is to help build a society where everyone, whatever their social or financial background, has access to dignity, education, justice and equal opportunity.',
+        'I see the foundation as a platform that goes beyond immediate assistance and invests in long-term social development — through education, legal awareness, youth empowerment, women’s welfare and support for underprivileged communities.',
+        'I also hope to build stronger connections between communities in India and across the globe, bringing people together through compassion, responsibility and collective effort — so that the foundation creates real opportunities, transforms lives and inspires generations to contribute to a better society.',
+      ],
+    },
+  },
 ];
 
 export const officeBearers: Person[] = [

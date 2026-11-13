@@ -17,7 +17,7 @@ npm run build    # static output in dist/
 | `src/data/site.ts` | Name, address, phone, email, navigation menu |
 | `src/data/content.ts` | All page copy (vision, mission, pillars, programmes, founder's message) |
 | `src/data/leadership.ts` | Founder, board and office bearers, with their personal visions (order = display order) |
-| `src/assets/team/` | Portraits; files in `unassigned/` are not yet linked to a person |
+| `src/assets/team/` | Portraits, one file per person |
 | `src/components/` | One component per page section |
 | `src/styles/global.css` | Brand colours, fonts and shared styles |
 

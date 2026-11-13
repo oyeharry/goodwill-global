@@ -1,0 +1,51 @@
+---
+import Icon from '@/components/Icon.astro';
+import { hero, pillars } from '@/data/content';
+---
+
+<section id="top" class="relative isolate overflow-hidden bg-brand-950 text-white">
+  <!-- Decorative backdrop -->
+  <div class="absolute inset-0 -z-10" aria-hidden="true">
+    <div class="absolute inset-0 bg-linear-to-br from-brand-900 via-brand-950 to-brand-950"></div>
+    <div class="absolute -top-40 -right-40 h-[38rem] w-[38rem] rounded-full bg-brand-600/30 blur-3xl"></div>
+    <div class="absolute -bottom-52 -left-32 h-[30rem] w-[30rem] rounded-full bg-accent-500/20 blur-3xl"></div>
+    <svg
+      viewBox="0 0 600 600"
+      class="absolute top-1/2 -right-40 hidden h-[52rem] w-[52rem] -translate-y-1/2 stroke-white/10 md:block"
+      fill="none"
+    >
+      <circle cx="300" cy="300" r="290"></circle>
+      <ellipse cx="300" cy="300" rx="290" ry="110"></ellipse>
+      <ellipse cx="300" cy="300" rx="290" ry="210"></ellipse>
+      <ellipse cx="300" cy="300" rx="110" ry="290"></ellipse>
+      <ellipse cx="300" cy="300" rx="210" ry="290"></ellipse>
+      <path d="M10 300h580M300 10v580"></path>
+    </svg>
+  </div>
+
+  <div class="container-page pt-40 pb-20 sm:pt-52 sm:pb-28">
+    <p class="text-xs font-semibold tracking-[0.25em] text-accent-300 uppercase">{hero.eyebrow}</p>
+    <h1 class="mt-5 max-w-3xl font-display text-5xl leading-[1.05] font-semibold text-balance sm:text-7xl">
+      {hero.title}
+    </h1>
+    <p class="mt-6 max-w-xl text-lg text-white/80 sm:text-xl">{hero.lead}</p>
+
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a href="#get-involved" class="btn btn-primary">
+        Get involved <Icon name="arrow" class="h-4 w-4" />
+      </a>
+      <a href="#about" class="btn btn-outline-light">Our vision</a>
+    </div>
+
+    <ul class="mt-16 grid max-w-3xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/15 pt-8 sm:grid-cols-4">
+      {
+        pillars.map((pillar) => (
+          <li class="flex items-center gap-2.5 text-sm text-white/80">
+            <Icon name={pillar.icon} class="h-5 w-5 shrink-0 text-accent-400" />
+            {pillar.title}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

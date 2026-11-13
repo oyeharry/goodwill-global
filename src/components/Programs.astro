@@ -1,0 +1,29 @@
+---
+import Icon from '@/components/Icon.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { programs } from '@/data/content';
+---
+
+<section id="programs" class="section">
+  <div class="container-page">
+    <SectionHeading
+      eyebrow="In the community"
+      title="Help that meets people where they are."
+      lead="We listen first, then respond to what people actually need — with patience, privacy and respect."
+    />
+
+    <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        programs.map((program) => (
+          <li class="card transition hover:-translate-y-1 hover:shadow-md">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+              <Icon name={program.icon} />
+            </span>
+            <h3 class="mt-5 font-display text-lg font-semibold text-brand-950">{program.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink/70">{program.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

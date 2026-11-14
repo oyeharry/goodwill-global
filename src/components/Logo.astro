@@ -1,4 +1,7 @@
 ---
+import { site } from '@/data/site';
+import { withBase } from '@/utils/paths';
+
 interface Props {
   /** Use on dark backgrounds. */
   light?: boolean;
@@ -8,28 +11,30 @@ const { light = false } = Astro.props;
 ---
 
 <a href="#top" class="flex items-center gap-3">
-  <svg viewBox="0 0 48 48" class="h-10 w-10 shrink-0" aria-hidden="true">
-    <circle cx="24" cy="24" r="22" class={light ? 'fill-white/10' : 'fill-brand-800'}></circle>
-    <path
-      d="M24 4a20 20 0 0 1 0 40M24 4a20 20 0 0 0 0 40M4 24h40"
-      fill="none"
-      stroke-width="1.5"
-      class={light ? 'stroke-white/30' : 'stroke-white/25'}></path>
-    <path
-      d="M24 34.5s-9-5.6-9-12a5.2 5.2 0 0 1 9-3.5 5.2 5.2 0 0 1 9 3.5c0 6.400-9 12-9 12Z"
-      class="fill-accent-400"></path>
-  </svg>
-  <span class="leading-tight">
-    <span class:list={['block font-display text-lg font-semibold', light ? 'text-white' : 'text-brand-900']}>
-      Goodwill Global
+  <img
+    src={withBase(light ? 'logo-mark-light.svg' : 'logo-mark.svg')}
+    alt=""
+    width="1170"
+    height="813"
+    class="h-11 w-auto shrink-0 sm:h-12"
+  />
+  <span class="leading-none">
+    <span
+      class:list={[
+        'block font-display text-xl font-semibold tracking-wide uppercase sm:text-2xl',
+        light ? 'text-white' : 'text-brand-900',
+      ]}
+    >
+      Goodwill
     </span>
     <span
       class:list={[
-        'block text-[0.65rem] font-semibold tracking-[0.25em] uppercase',
-        light ? 'text-white/60' : 'text-brand-700',
+        'mt-1 block text-[0.6rem] font-semibold tracking-[0.2em] uppercase sm:text-[0.65rem]',
+        light ? 'text-accent-300' : 'text-accent-700',
       ]}
     >
-      Foundation
+      Global Foundation
     </span>
   </span>
+  <span class="sr-only">{site.name} — home</span>
 </a>

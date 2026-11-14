@@ -1,0 +1,22 @@
+---
+import SectionHeading from '@/components/SectionHeading.astro';
+import { commitment } from '@/data/content';
+---
+
+<section id="commitment" class="section bg-brand-950">
+  <div class="container-page">
+    <SectionHeading light eyebrow="Our commitment" title={commitment.title} lead={commitment.lead} />
+
+    <ul class="mt-12 grid gap-5 md:grid-cols-3">
+      {
+        commitment.points.map((point) => (
+          <li class="rounded-3xl border border-white/10 bg-white/5 p-7">
+            <span class="block h-1 w-10 rounded-full bg-accent-500" aria-hidden="true" />
+            <h3 class="mt-5 font-display text-xl font-semibold text-white">{point.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">{point.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

@@ -31,8 +31,8 @@ export interface Person {
  */
 
 export const founder: Person = {
-  slug: 'sunil-kumar-thakur',
-  name: 'Sunil Kumar Thakur',
+  slug: 'sunil-kumar',
+  name: 'Sunil Kumar',
   role: 'Founder & Director',
   profession: 'M.A. in Sociology',
   photo: sunilPhoto,
@@ -42,24 +42,8 @@ export const founder: Person = {
 export const boardOfDirectors: Person[] = [
   founder,
   {
-    slug: 'rakesh-kumar',
-    name: 'Rakesh Kumar',
-    role: 'Director',
-    profession: 'Teacher',
-    photo: rakeshPhoto,
-    vision: {
-      quote:
-        'Until we wipe away the tears of the person standing at the very end of the line, no progress holds real value.',
-      paragraphs: [
-        'I believe that when empathy is backed by a disciplined and honest plan of action, it can overcome deep inequalities and restore dignity to those who suffer. I am drawn to the foundation’s non-political, impartial, grassroots approach — real solutions on the ground, not policies on paper.',
-        'For me, social service is a sacred practice. Education and healthcare are its two pillars: value-based education that helps every child grow into a good human being and a responsible citizen, and basic healthcare within reach of everyone, so that no life is lost for want of treatment.',
-        'A great society is built not by grand buildings or prosperity alone, but by the character of its people — honesty, compassion, tolerance and mutual respect. My goal is a just and equal society where no one remains hungry, uneducated, sick or helpless.',
-      ],
-    },
-  },
-  {
     slug: 'karanpreet-kaur',
-    name: 'Karanpreet Kaur',
+    name: 'Karan Preet Kaur',
     role: 'Director',
     profession: 'Registered Nurse',
     photo: karanpreetPhoto,
@@ -83,6 +67,22 @@ export const boardOfDirectors: Person[] = [
         'My mission is to serve humanity beyond boundaries, respect every individual, protect the vulnerable, and spread peace through my actions.',
       paragraphs: [
         'My vision is to build a future where every heart feels safe, every voice is respected, and every soul has the freedom to live in peace and happiness.',
+      ],
+    },
+  },
+  {
+    slug: 'rakesh-kumar',
+    name: 'Rakesh Kumar',
+    role: 'Director',
+    profession: 'Teacher',
+    photo: rakeshPhoto,
+    vision: {
+      quote:
+        'Until we wipe away the tears of the person standing at the very end of the line, no progress holds real value.',
+      paragraphs: [
+        'I believe that when empathy is backed by a disciplined and honest plan of action, it can overcome deep inequalities and restore dignity to those who suffer. I am drawn to the foundation’s non-political, impartial, grassroots approach — real solutions on the ground, not policies on paper.',
+        'For me, social service is a sacred practice. Education and healthcare are its two pillars: value-based education that helps every child grow into a good human being and a responsible citizen, and basic healthcare within reach of everyone, so that no life is lost for want of treatment.',
+        'A great society is built not by grand buildings or prosperity alone, but by the character of its people — honesty, compassion, tolerance and mutual respect. My goal is a just and equal society where no one remains hungry, uneducated, sick or helpless.',
       ],
     },
   },

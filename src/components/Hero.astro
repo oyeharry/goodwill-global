@@ -1,6 +1,6 @@
 ---
 import Icon from '@/components/Icon.astro';
-import { hero, pillars } from '@/data/content';
+import { hero, workAreas } from '@/data/content';
 ---
 
 <section id="top" class="relative isolate overflow-hidden bg-brand-950 text-white">
@@ -34,15 +34,15 @@ import { hero, pillars } from '@/data/content';
       <a href="#get-involved" class="btn btn-primary">
         Get involved <Icon name="arrow" class="h-4 w-4" />
       </a>
-      <a href="#about" class="btn btn-outline-light">Our vision</a>
+      <a href="#work" class="btn btn-outline-light">What we do</a>
     </div>
 
-    <ul class="mt-16 grid max-w-3xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/15 pt-8 sm:grid-cols-4">
+    <ul class="mt-14 flex max-w-3xl flex-wrap gap-2 border-t border-white/15 pt-8">
       {
-        pillars.map((pillar) => (
-          <li class="flex items-center gap-2.5 text-sm text-white/80">
-            <Icon name={pillar.icon} class="h-5 w-5 shrink-0 text-accent-400" />
-            {pillar.title}
+        workAreas.map((area) => (
+          <li class="flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-2 text-sm text-white/85">
+            <Icon name={area.icon} class="h-4 w-4 shrink-0 text-accent-400" />
+            {area.short}
           </li>
         ))
       }
@@ -53,7 +53,7 @@ import { hero, pillars } from '@/data/content';
 <style>
   .hero-glow {
     background:
-      radial-gradient(40rem 40rem at 100% 0%, rgb(26 128 128 / 0.35), transparent 65%),
-      radial-gradient(32rem 32rem at 0% 100%, rgb(232 145 45 / 0.18), transparent 65%);
+      radial-gradient(40rem 40rem at 100% 0%, rgb(31 85 176 / 0.45), transparent 65%),
+      radial-gradient(32rem 32rem at 0% 100%, rgb(212 160 44 / 0.16), transparent 65%);
   }
 </style>

@@ -15,11 +15,12 @@ npm run build    # static output in dist/
 | Path | What it holds |
 | --- | --- |
 | `src/data/site.ts` | Name, address, phone, email, navigation menu |
-| `src/data/content.ts` | All page copy (vision, mission, pillars, programmes, founder's message) |
+| `src/data/content.ts` | All page copy (who we are, vision, mission, areas of work, commitment) |
 | `src/data/leadership.ts` | Founder, board and office bearers, with their personal visions (order = display order) |
 | `src/assets/team/` | Portraits, one file per person |
 | `src/components/` | One component per page section |
 | `src/styles/global.css` | Brand colours, fonts and shared styles |
+| `public/logo.svg` | Full logo with wordmark; `logo-mark*.svg` are the emblem for light and dark backgrounds |
 
 Most edits only need the `src/data/` files.
 

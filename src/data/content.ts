@@ -2,105 +2,163 @@
 
 export const hero = {
   eyebrow: 'Goodwill Global Foundation',
-  title: 'Serving humanity beyond boundaries.',
-  lead: 'We stand with people facing poverty, hardship and exclusion — so that everyone, whatever their background, can live with dignity, opportunity and peace.',
+  title: 'Together for a better tomorrow.',
+  lead: 'A Canadian non-profit serving humanity — supporting underprivileged communities and creating opportunities for individuals and families in need.',
 };
 
-export const vision =
-  'To build a future where every heart feels safe, every voice is respected, and every soul has the freedom to live in peace and happiness.';
-
-export const mission =
-  'To serve humanity beyond boundaries, respect every individual, protect the vulnerable, and spread peace through our actions.';
-
 export const about = {
-  title: 'Compassion, backed by action.',
+  title: 'Building a more compassionate, inclusive and sustainable society.',
   paragraphs: [
-    'Goodwill Global Foundation is a non-political, impartial group of people who believe that education and opportunity come with a responsibility to give back.',
-    'We look beyond one-time relief to lasting change: practical, on-the-ground support that helps individuals and families become self-reliant, and that connects communities in Canada, India and around the world.',
+    'Goodwill Global Foundation is a Canadian non-profit organization, established on October 27, 2026.',
+    'We serve humanity by addressing social challenges, supporting underprivileged communities and creating opportunities for individuals and families in need. We believe everyone deserves access to basic necessities, quality education, healthcare, dignity and equal opportunity.',
+    'Through charitable initiatives, public participation and collective effort, we work to bring meaningful and lasting change — in Canada and internationally.',
   ],
 };
 
-export interface IconCard {
-  icon: 'livelihood' | 'education' | 'health' | 'harmony' | 'learn' | 'compass' | 'scale' | 'people' | 'hands' | 'globe';
-  title: string;
+export interface Statement {
+  label: string;
+  /** The headline sentence. */
   text: string;
+  /** A supporting line shown underneath. */
+  detail: string;
 }
 
-export const pillars: IconCard[] = [
+export const statements: Statement[] = [
   {
-    icon: 'livelihood',
-    title: 'Ending poverty',
-    text: 'Breaking generational cycles of poverty through livelihood training, micro-enterprise support and timely relief for families in need.',
+    label: 'Our vision',
+    text: 'A world where every individual can live with dignity, access essential resources, receive quality education and contribute positively to society.',
+    detail:
+      'We envision stronger communities built on compassion, equality, education, cultural understanding and sustainable development.',
+  },
+  {
+    label: 'Our mission',
+    text: 'To improve lives and strengthen communities through charitable initiatives, social support, education, healthcare, environmental protection and community empowerment.',
+    detail:
+      'We reach individuals and families facing social and economic challenges, and provide opportunities, resources and support for a better future.',
+  },
+];
+
+export type IconName = 'hands' | 'education' | 'health' | 'home' | 'leaf' | 'trophy' | 'book';
+
+export interface WorkArea {
+  icon: IconName;
+  title: string;
+  /** Short label used in the hero. */
+  short: string;
+  points: string[];
+}
+
+export const workAreas: WorkArea[] = [
+  {
+    icon: 'hands',
+    title: 'Poverty relief & social welfare',
+    short: 'Poverty relief',
+    points: [
+      'Food, clothing, clean water and essential supplies for families in need',
+      'Financial assistance for people facing economic hardship',
+      'Help for disaster-affected communities',
+      'Settlement and integration support for newcomers and immigrants',
+    ],
   },
   {
     icon: 'education',
-    title: 'Empowering through education',
-    text: 'Opening doors with learning centres, scholarships and digital literacy — so children and adults alike can shape their own futures.',
+    title: 'Education & youth development',
+    short: 'Education',
+    points: [
+      'Scholarships, books and learning materials',
+      'Support for children and young people from disadvantaged backgrounds',
+      'Academic development, career guidance and mentorship',
+      'Leadership, confidence and life skills',
+    ],
   },
   {
     icon: 'health',
-    title: 'Accessible healthcare',
-    text: 'Bringing medical care, maternal health and mental-health support closer to those who need it. Healthcare is a right, not a privilege.',
+    title: 'Healthcare & well-being',
+    short: 'Healthcare',
+    points: [
+      'Access to essential healthcare services and medical resources',
+      'Health and well-being awareness',
+      'Awareness and access to support services for those affected by substance-use disorders',
+    ],
   },
   {
-    icon: 'harmony',
-    title: 'Ethics & harmony',
-    text: 'Uniting people of every faith and tradition around shared values — compassion, honesty and reverence for life.',
+    icon: 'home',
+    title: 'Senior citizen welfare',
+    short: 'Senior welfare',
+    points: [
+      'Reducing social isolation among senior citizens',
+      'Social, recreational and community support programmes',
+      'Initiatives that improve quality of life for the elderly',
+    ],
+  },
+  {
+    icon: 'leaf',
+    title: 'Environmental protection',
+    short: 'Environment',
+    points: [
+      'Tree plantation and conservation',
+      'Community cleanliness and environmental awareness',
+      'Water conservation, waste reduction and sustainable practices',
+    ],
+  },
+  {
+    icon: 'trophy',
+    title: 'Youth, sports & leadership',
+    short: 'Sports & leadership',
+    points: [
+      'Participation in sports and recreational activities',
+      'Mentoring and leadership development programmes',
+      'Building confidence, teamwork and self-esteem',
+    ],
+  },
+  {
+    icon: 'book',
+    title: 'Religion, culture & community values',
+    short: 'Culture & values',
+    points: [
+      'Awareness of Hindu religious teachings, traditions and values',
+      'Religious and cultural education',
+      'Lectures and workshops on Hindu culture, history and language',
+    ],
   },
 ];
 
-export const programs: IconCard[] = [
-  {
-    icon: 'learn',
-    title: 'Health education',
-    text: 'Clear, friendly sessions on healthy eating, disease prevention, children’s health, mental well-being and living with chronic conditions.',
-  },
-  {
-    icon: 'compass',
-    title: 'Guidance for newcomers',
-    text: 'A welcoming first step for families finding their way through the Canadian healthcare system and local services.',
-  },
-  {
-    icon: 'hands',
-    title: 'Practical family support',
-    text: 'Working with community partners to connect families with help for food, housing and other everyday essentials.',
-  },
-  {
-    icon: 'scale',
-    title: 'Legal awareness',
-    text: 'Helping people understand their rights and reach the justice and support they are entitled to.',
-  },
-  {
-    icon: 'people',
-    title: 'Women & youth',
-    text: 'Programmes that support women’s welfare and give young people the skills and confidence to lead.',
-  },
-  {
-    icon: 'globe',
-    title: 'Connecting communities',
-    text: 'Building bridges between communities in India and across the globe through shared responsibility and collective effort.',
-  },
-];
-
-export const values = [
-  { title: 'Dignity', text: 'Everyone is welcomed with respect. No one’s needs matter less.' },
-  { title: 'Impartiality', text: 'Non-political, guided by need — not borders, backgrounds or beliefs.' },
-  { title: 'Integrity', text: 'Transparent governance and careful stewardship of every resource.' },
-  { title: 'Listening', text: 'Communities shape our priorities; privacy and independence are protected.' },
-];
-
-export const founderMessage = {
-  title: 'A bridge between human potential and human dignity.',
-  paragraphs: [
-    'In a world often divided by geography, status and ideology, our vision is more than an aspiration — it is a blueprint for compassionate, systemic action.',
-    'True progress cannot be measured by economic metrics alone. It is measured by the safety, freedom and well-being of the people in our communities. When a heart feels safe, fear gives way to resilience. When a voice is respected, people step forward as architects of their own destiny.',
-    'Service beyond boundaries means our reach is guided by human need rather than borders, backgrounds or beliefs. Every resource entrusted to us is used with transparency and care. We invite partners, donors and changemakers to join us.',
+export const commitment = {
+  title: 'A non-profit in purpose and in practice.',
+  lead: 'We believe meaningful social change requires transparency, responsibility, dedication and collective participation.',
+  points: [
+    {
+      title: 'Every resource serves the cause',
+      text: 'All income and resources are dedicated to our charitable purposes — never to generating profit for members.',
+    },
+    {
+      title: 'Voluntary leadership',
+      text: 'Our directors serve without remuneration. Only reasonable expenses incurred in their duties may be reimbursed.',
+    },
+    {
+      title: 'Open and accountable',
+      text: 'We hold ourselves to transparency and responsibility in everything we do.',
+    },
   ],
-  closing:
-    'Together, through deliberate kindness and courageous leadership, we will turn our vision into a living reality.',
 };
 
-export const getInvolved = {
-  title: 'Goodwill grows when it is shared.',
-  lead: 'Whether you give your time, your skills or your support, there is a place for you here. Partner with us, volunteer, or simply start a conversation.',
+export const founderProfile =
+  'Sunil Kumar founded Goodwill Global Foundation with the vision of promoting social welfare, supporting underprivileged communities and contributing towards meaningful social development.';
+
+export const leadership = {
+  title: 'The people behind the purpose.',
+  boardIntro:
+    'The Foundation is guided by a dedicated Board of Directors responsible for its governance, administration and overall development.',
+  members: {
+    title: 'Our members',
+    paragraphs: [
+      'Our members are an integral part of Goodwill Global Foundation. They contribute through their participation, ideas, dedication and commitment to the Foundation’s charitable objectives.',
+      'Together, our leadership team and members work towards building stronger communities and creating a positive impact on society.',
+    ],
+  },
+};
+
+export const together = {
+  title: 'Even small acts of kindness create meaningful change.',
+  lead: 'Serving society is a shared responsibility. Every contribution, effort and initiative helps build a better future — join us in creating opportunities and empowering communities.',
 };

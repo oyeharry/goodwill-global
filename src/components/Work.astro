@@ -1,0 +1,48 @@
+---
+import Icon from '@/components/Icon.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { workAreas } from '@/data/content';
+---
+
+<section id="work" class="section bg-brand-50">
+  <div class="container-page">
+    <SectionHeading
+      eyebrow="What we do"
+      title="Our key areas of work."
+      lead="Seven areas where charitable initiatives and collective effort can change lives."
+    />
+
+    <ol class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        workAreas.map((area, index) => (
+          <li class="card flex flex-col p-6">
+            <div class="flex items-center justify-between">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-900 text-accent-400">
+                <Icon name={area.icon} />
+              </span>
+              <span class="font-display text-2xl text-brand-900/25" aria-hidden="true">
+                0{index + 1}
+              </span>
+            </div>
+            <h3 class="mt-5 font-display text-lg leading-snug font-semibold text-brand-950">{area.title}</h3>
+            <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-ink/75">
+              {area.points.map((point) => (
+                <li class="flex gap-2.5">
+                  <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600" />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
+
+      <li class="flex flex-col justify-between rounded-3xl bg-brand-900 p-6 text-white">
+        <p class="font-display text-xl leading-snug">Want to support one of these causes?</p>
+        <a href="#get-involved" class="btn btn-primary mt-6 self-start">
+          Get involved <Icon name="arrow" class="h-4 w-4" />
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>

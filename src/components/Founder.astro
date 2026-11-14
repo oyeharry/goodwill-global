@@ -1,0 +1,22 @@
+---
+import Portrait from '@/components/Portrait.astro';
+import { founderProfile } from '@/data/content';
+import { founder } from '@/data/leadership';
+import { site } from '@/data/site';
+---
+
+<section id="founder" class="section">
+  <div class="container-page">
+    <div class="grid items-center gap-8 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-brand-900/10 sm:p-10 md:grid-cols-[16rem_1fr] md:gap-12">
+      <Portrait person={founder} size={320} class="mx-auto aspect-[5/6] w-full max-w-64 rounded-3xl shadow-lg" />
+      <div>
+        <p class="text-xs font-semibold tracking-[0.22em] text-accent-700 uppercase">Our founder</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold text-brand-950 sm:text-4xl">{founder.name}</h2>
+        <p class="mt-1 text-sm text-ink/60">Founder — {site.name}</p>
+        <p class="mt-6 border-l-4 border-accent-500 pl-5 font-display text-xl leading-snug text-brand-900">
+          {founderProfile}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

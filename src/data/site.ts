@@ -2,9 +2,10 @@
 export const site = {
   name: 'Goodwill Global Foundation',
   shortName: 'Goodwill Global',
-  tagline: 'Serving humanity beyond boundaries.',
+  tagline: 'Together for a Better Tomorrow',
+  motto: 'Building Hope, Empowering Lives.',
   description:
-    'Goodwill Global Foundation is a non-political, community-driven organisation advancing dignity, education, healthcare and equal opportunity for all.',
+    'Goodwill Global Foundation is a Canadian non-profit organization serving humanity through poverty relief, education, healthcare, environmental protection and community empowerment.',
   address: {
     street: '80 Kettlewell Crescent',
     city: 'Brampton',
@@ -30,26 +31,20 @@ export const navigation: NavItem[] = [
     label: 'About us',
     href: '#about',
     children: [
-      { label: 'Vision & mission', href: '#about' },
-      { label: 'Our values', href: '#values' },
-      { label: "Founder's message", href: '#founder' },
+      { label: 'Who we are', href: '#about' },
+      { label: 'Vision & mission', href: '#vision' },
+      { label: 'Our commitment', href: '#commitment' },
     ],
   },
-  {
-    label: 'What we do',
-    href: '#pillars',
-    children: [
-      { label: 'Our four pillars', href: '#pillars' },
-      { label: 'In the community', href: '#programs' },
-    ],
-  },
+  { label: 'What we do', href: '#work' },
   {
     label: 'Leadership',
     href: '#leadership',
     children: [
-      { label: 'Founder', href: '#founder' },
+      { label: 'Our founder', href: '#founder' },
       { label: 'Board of Directors', href: '#board' },
       { label: 'Office bearers', href: '#office-bearers' },
+      { label: 'Our members', href: '#members' },
     ],
   },
   { label: 'Contact', href: '#contact' },

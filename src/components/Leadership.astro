@@ -1,6 +1,7 @@
 ---
 import PersonCard from '@/components/PersonCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
+import { leadership } from '@/data/content';
 import { boardOfDirectors, officeBearers } from '@/data/leadership';
 import { initials } from '@/utils/paths';
 
@@ -11,8 +12,8 @@ const groupTitle = 'flex items-center gap-4 text-sm font-semibold tracking-[0.2e
   <div class="container-page">
     <SectionHeading
       eyebrow="Leadership"
-      title="The people behind the purpose."
-      lead="A team united by one belief: that service to others is the highest responsibility."
+      title={leadership.title}
+      lead={leadership.boardIntro}
     />
 
     <div id="board" class="mt-14">
@@ -48,6 +49,13 @@ const groupTitle = 'flex items-center gap-4 text-sm font-semibold tracking-[0.2e
           ))
         }
       </ul>
+    </div>
+
+    <div id="members" class="mt-14 rounded-3xl bg-brand-50 p-7 sm:p-10">
+      <h3 class="font-display text-2xl font-semibold text-brand-950">{leadership.members.title}</h3>
+      <div class="mt-4 max-w-3xl space-y-3 text-ink/75">
+        {leadership.members.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
     </div>
   </div>
 </section>

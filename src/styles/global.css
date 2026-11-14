@@ -7,23 +7,24 @@
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
 
-  --color-brand-50: #eef8f6;
-  --color-brand-100: #d9efec;
-  --color-brand-200: #b3ddd8;
-  --color-brand-600: #1a8080;
-  --color-brand-700: #136767;
-  --color-brand-800: #0f4f4f;
-  --color-brand-900: #0b3b3c;
-  --color-brand-950: #06282a;
+  /* Navy and gold, taken from the foundation's logo. */
+  --color-brand-50: #eff4fb;
+  --color-brand-100: #dce7f6;
+  --color-brand-200: #b9cfee;
+  --color-brand-600: #1f55b0;
+  --color-brand-700: #17438f;
+  --color-brand-800: #123572;
+  --color-brand-900: #0d2857;
+  --color-brand-950: #081a3d;
 
-  --color-accent-300: #f7c688;
-  --color-accent-400: #f2a94e;
-  --color-accent-500: #e8912d;
-  --color-accent-600: #cf7618;
-  --color-accent-700: #9a520b; /* text on light backgrounds (AA contrast) */
+  --color-accent-300: #ecd08a;
+  --color-accent-400: #e0b552;
+  --color-accent-500: #d4a02c;
+  --color-accent-600: #b98420;
+  --color-accent-700: #7d580f; /* text on light backgrounds (AA contrast) */
 
-  --color-cream: #faf7f1;
-  --color-ink: #1c2524;
+  --color-cream: #f9f8f5;
+  --color-ink: #1b2233;
 }
 
 @layer base {

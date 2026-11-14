@@ -7,7 +7,7 @@ export const site = {
   description:
     'Goodwill Global Foundation is a Canadian non-profit organization serving humanity through poverty relief, education, healthcare, environmental protection and community empowerment.',
   address: {
-    street: '80 Kettlewell Crescent',
+    street: '82 Kettlewell Crescent',
     city: 'Brampton',
     region: 'Ontario',
     postalCode: 'L6R 0T1',

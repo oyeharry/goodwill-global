@@ -2,6 +2,8 @@ import type { ImageMetadata } from 'astro';
 import karanpreetPhoto from '@/assets/team/karanpreet-kaur.jpg';
 import nehaPhoto from '@/assets/team/neha-rameshbhai-patel.jpg';
 import rakeshPhoto from '@/assets/team/rakesh-kumar.jpg';
+import avinashPhoto from '@/assets/team/avinash-kumar.jpg';
+import sagarPhoto from '@/assets/team/sagar-jaswal.jpg';
 import sahilPhoto from '@/assets/team/sahil-thakur.jpg';
 import sunilPhoto from '@/assets/team/sunil-kumar-thakur.jpg';
 
@@ -103,8 +105,33 @@ export const boardOfDirectors: Person[] = [
 ];
 
 export const officeBearers: Person[] = [
-  { slug: 'sagar-jaswal', name: 'Sagar Jaswal', role: 'President' },
-  { slug: 'avinash-kumar', name: 'Avinash Kumar', role: 'Secretary' },
+  {
+    slug: 'sagar-jaswal',
+    name: 'Sagar Jaswal',
+    role: 'President',
+    photo: sagarPhoto,
+    vision: {
+      quote: 'Being part of society is not just about living in it, but also about contributing to it.',
+      paragraphs: [
+        'My vision is to build a community where kindness is not just a word, equality is not just an idea, and helping others is not an occasional gesture but a responsibility we all share.',
+        'Every individual deserves respect, dignity and an equal opportunity to grow, whatever their background, circumstances or position in society. We may not change everyone’s life overnight, but even the smallest effort can make a difference in someone’s life.',
+        'I want this foundation to stand for more than charity. I want it to be a platform where people come together, understand each other’s struggles, share opportunities and work towards positive change — a place where we don’t just talk about problems, but take responsibility for solving them.',
+      ],
+    },
+  },
+  {
+    slug: 'avinash-kumar',
+    name: 'Avinash Kumar',
+    role: 'Secretary',
+    photo: avinashPhoto,
+    vision: {
+      quote:
+        'To build a future where every heart feels safe, every voice is respected, and every soul has the freedom to live in peace and happiness.',
+      paragraphs: [
+        'My mission is to serve humanity beyond boundaries, respect every individual, protect the vulnerable, and spread peace through my actions.',
+      ],
+    },
+  },
 ];
 
 export const everyone: Person[] = [...boardOfDirectors, ...officeBearers];

@@ -3,7 +3,6 @@ import PersonCard from '@/components/PersonCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { leadership } from '@/data/content';
 import { boardOfDirectors, officeBearers } from '@/data/leadership';
-import { initials } from '@/utils/paths';
 
 const groupTitle = 'flex items-center gap-4 text-sm font-semibold tracking-[0.2em] text-brand-700 uppercase';
 ---
@@ -31,23 +30,8 @@ const groupTitle = 'flex items-center gap-4 text-sm font-semibold tracking-[0.2e
         Office bearers
         <span class="h-px flex-1 bg-brand-900/10"></span>
       </h3>
-      <ul class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-5">
-        {
-          officeBearers.map((person) => (
-            <li class="flex items-center gap-5 rounded-3xl border border-brand-900/10 bg-white p-5 shadow-sm sm:p-6">
-              <span
-                class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-brand-700 to-brand-950 font-display text-lg font-semibold text-white"
-                aria-hidden="true"
-              >
-                {initials(person.name)}
-              </span>
-              <div>
-                <p class="text-xs font-semibold tracking-[0.2em] text-accent-700 uppercase">{person.role}</p>
-                <h4 class="mt-1 font-display text-xl font-semibold text-brand-950">{person.name}</h4>
-              </div>
-            </li>
-          ))
-        }
+      <ul class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5">
+        {officeBearers.map((person) => <PersonCard person={person} />)}
       </ul>
     </div>
 

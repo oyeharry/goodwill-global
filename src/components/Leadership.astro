@@ -2,9 +2,7 @@
 import PersonCard from '@/components/PersonCard.astro';
 import SectionHeading from '@/components/SectionHeading.astro';
 import { leadership } from '@/data/content';
-import { boardOfDirectors, officeBearers } from '@/data/leadership';
-
-const groupTitle = 'flex items-center gap-4 text-sm font-semibold tracking-[0.2em] text-brand-700 uppercase';
+import { everyone } from '@/data/leadership';
 ---
 
 <section id="leadership" class="section">
@@ -15,25 +13,9 @@ const groupTitle = 'flex items-center gap-4 text-sm font-semibold tracking-[0.2e
       lead={leadership.boardIntro}
     />
 
-    <div id="board" class="mt-14">
-      <h3 class={groupTitle}>
-        Board of Directors
-        <span class="h-px flex-1 bg-brand-900/10"></span>
-      </h3>
-      <ul class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5">
-        {boardOfDirectors.map((person) => <PersonCard person={person} />)}
-      </ul>
-    </div>
-
-    <div id="office-bearers" class="mt-14">
-      <h3 class={groupTitle}>
-        Office bearers
-        <span class="h-px flex-1 bg-brand-900/10"></span>
-      </h3>
-      <ul class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5">
-        {officeBearers.map((person) => <PersonCard person={person} />)}
-      </ul>
-    </div>
+    <ul id="board" class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
+      {everyone.map((person) => <PersonCard person={person} />)}
+    </ul>
 
     <div id="members" class="mt-14 rounded-3xl bg-brand-50 p-7 sm:p-10">
       <h3 class="font-display text-2xl font-semibold text-brand-950">{leadership.members.title}</h3>

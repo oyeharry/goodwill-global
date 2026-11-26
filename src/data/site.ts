@@ -43,7 +43,6 @@ export const navigation: NavItem[] = [
     children: [
       { label: 'Our founder', href: '#founder' },
       { label: 'Board of Directors', href: '#board' },
-      { label: 'Office bearers', href: '#office-bearers' },
       { label: 'Our members', href: '#members' },
     ],
   },

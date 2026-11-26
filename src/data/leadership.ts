@@ -134,4 +134,5 @@ export const officeBearers: Person[] = [
   },
 ];
 
+/** Everyone shown in the leadership grid: directors first, then office bearers. */
 export const everyone: Person[] = [...boardOfDirectors, ...officeBearers];

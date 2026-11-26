@@ -36,7 +36,7 @@ export const founder: Person = {
   slug: 'sunil-kumar',
   name: 'Sunil Kumar',
   role: 'Founder & Director',
-  profession: 'M.A. in Sociology',
+  profession: 'Electrical Apprentice · M.A. in Sociology',
   photo: sunilPhoto,
 };
 
@@ -111,11 +111,12 @@ export const officeBearers: Person[] = [
     role: 'President',
     photo: sagarPhoto,
     vision: {
-      quote: 'Being part of society is not just about living in it, but also about contributing to it.',
+      quote: 'What matters is not how much we achieve for ourselves, but how much difference we make in the lives of others.',
       paragraphs: [
-        'My vision is to build a community where kindness is not just a word, equality is not just an idea, and helping others is not an occasional gesture but a responsibility we all share.',
-        'Every individual deserves respect, dignity and an equal opportunity to grow, whatever their background, circumstances or position in society. We may not change everyone’s life overnight, but even the smallest effort can make a difference in someone’s life.',
-        'I want this foundation to stand for more than charity. I want it to be a platform where people come together, understand each other’s struggles, share opportunities and work towards positive change — a place where we don’t just talk about problems, but take responsibility for solving them.',
+        'Being part of society is not just about living in it, but contributing to it. I want to build a community where kindness is more than a word, equality more than an idea, and helping others a responsibility we all share.',
+        'I want this foundation to be more than charity — a platform where people come together, understand each other’s struggles, share opportunities and take responsibility for finding solutions, not just talking about problems.',
+        'As President, I see leadership not as being above others but as being accountable to them: listening, working as a team, and deciding with honesty and transparency. Goodwill should have no boundaries; humanity comes before our differences.',
+        'We won’t change the world in a day. But I hope we can one day look back and know that, because of our collective efforts, somebody found support, had a better opportunity, or found life a little easier.',
       ],
     },
   },

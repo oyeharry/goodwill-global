@@ -1,9 +1,9 @@
 /** All page copy lives here so wording can change without touching markup. */
 
 export const hero = {
-  eyebrow: 'Goodwill Global Foundation',
+  eyebrow: 'Canadian non-profit organization',
   title: 'Together for a better tomorrow.',
-  lead: 'A Canadian non-profit serving humanity — supporting underprivileged communities and creating opportunities for individuals and families in need.',
+  lead: 'We relieve poverty, open doors to education and healthcare, and help people live with dignity — in Canada and internationally.',
 };
 
 export const about = {
@@ -87,7 +87,7 @@ export const workAreas: WorkArea[] = [
     short: 'Senior welfare',
     points: [
       'Reducing social isolation among senior citizens',
-      'Social, recreational and community support programmes',
+      'Social, recreational and community support programs',
       'Initiatives that improve quality of life for the elderly',
     ],
   },
@@ -107,7 +107,7 @@ export const workAreas: WorkArea[] = [
     short: 'Sports & leadership',
     points: [
       'Participation in sports and recreational activities',
-      'Mentoring and leadership development programmes',
+      'Mentoring and leadership development programs',
       'Building confidence, teamwork and self-esteem',
     ],
   },

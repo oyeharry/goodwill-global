@@ -36,7 +36,7 @@ export const founder: Person = {
   slug: 'sunil-kumar',
   name: 'Sunil Kumar',
   role: 'Founder & Director',
-  profession: 'Electrical Apprentice · M.A. in Sociology',
+  profession: 'M.A. in Sociology',
   photo: sunilPhoto,
 };
 

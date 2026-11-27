@@ -8,7 +8,7 @@ import sahilPhoto from '@/assets/team/sahil-thakur.jpg';
 import sunilPhoto from '@/assets/team/sunil-kumar-thakur.jpg';
 
 export interface PersonalVision {
-  /** One-line pull quote, shown in the "In our members' words" section. */
+  /** One-line pull quote, shown in the "In our leaders’ words" section. */
   quote: string;
   /** Fuller statement, shown when a visitor opens "Read vision". */
   paragraphs: string[];
@@ -126,10 +126,11 @@ export const officeBearers: Person[] = [
     role: 'Secretary',
     photo: avinashPhoto,
     vision: {
-      quote:
-        'To build a future where every heart feels safe, every voice is respected, and every soul has the freedom to live in peace and happiness.',
+      quote: 'Kindness, humanity and social responsibility should guide everything we do.',
       paragraphs: [
-        'My mission is to serve humanity beyond boundaries, respect every individual, protect the vulnerable, and spread peace through my actions.',
+        'My vision is a compassionate, inclusive and empowered society, where every individual has an equal opportunity to live with dignity, hope and happiness.',
+        'I want to help build a community where people support one another and work together for a better future. Through dedicated service, community participation and sustainable initiatives, our aim is to bring positive change and make a real difference in people’s lives.',
+        'My ultimate dream is for Goodwill Global Foundation to become a recognized and respected organization that reaches people across communities and regions, transforming lives through compassion, service and empowerment.',
       ],
     },
   },

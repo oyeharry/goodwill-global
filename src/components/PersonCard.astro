@@ -15,13 +15,20 @@ const { person } = Astro.props;
   <Portrait
     person={person}
     size={320}
-    sizes="(min-width: 1024px) 210px, (min-width: 640px) 30vw, 45vw"
+    sizes="(min-width: 1024px) 270px, (min-width: 640px) 30vw, 45vw"
     class="aspect-[5/6]"
   />
   <div class="flex flex-1 flex-col p-4 sm:p-5">
     <h4 class="font-display text-base leading-snug font-semibold break-words text-brand-950 sm:text-lg">{person.name}</h4>
     <p class="mt-1 text-sm text-accent-700">{person.role}</p>
-    {person.profession && <p class="mt-1 text-xs text-ink/60">{person.profession}</p>}
+    {
+      person.profession && (
+        <p class="mt-1 text-xs text-ink/60">
+          {/* "A · B" shows each credential on its own line so neither breaks mid-phrase. */}
+          {person.profession.split(' · ').map((line) => <span class="block">{line}</span>)}
+        </p>
+      )
+    }
     {
       person.vision && (
         <button

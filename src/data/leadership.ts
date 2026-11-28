@@ -2,11 +2,13 @@ import type { ImageMetadata } from 'astro';
 import karanpreetPhoto from '@/assets/team/karanpreet-kaur.jpg';
 import nehaPhoto from '@/assets/team/neha-rameshbhai-patel.jpg';
 import rakeshPhoto from '@/assets/team/rakesh-kumar.jpg';
+import avinashPhoto from '@/assets/team/avinash-kumar.jpg';
+import sagarPhoto from '@/assets/team/sagar-jaswal.jpg';
 import sahilPhoto from '@/assets/team/sahil-thakur.jpg';
 import sunilPhoto from '@/assets/team/sunil-kumar-thakur.jpg';
 
 export interface PersonalVision {
-  /** One-line pull quote, shown in the "In our members' words" section. */
+  /** One-line pull quote, shown in the "In our leaders’ words" section. */
   quote: string;
   /** Fuller statement, shown when a visitor opens "Read vision". */
   paragraphs: string[];
@@ -103,8 +105,36 @@ export const boardOfDirectors: Person[] = [
 ];
 
 export const officeBearers: Person[] = [
-  { slug: 'sagar-jaswal', name: 'Sagar Jaswal', role: 'President' },
-  { slug: 'avinash-kumar', name: 'Avinash Kumar', role: 'Secretary' },
+  {
+    slug: 'sagar-jaswal',
+    name: 'Sagar Jaswal',
+    role: 'President',
+    photo: sagarPhoto,
+    vision: {
+      quote: 'What matters is not how much we achieve for ourselves, but how much difference we make in the lives of others.',
+      paragraphs: [
+        'Being part of society is not just about living in it, but contributing to it. I want to build a community where kindness is more than a word, equality more than an idea, and helping others a responsibility we all share.',
+        'I want this foundation to be more than charity — a platform where people come together, understand each other’s struggles, share opportunities and take responsibility for finding solutions, not just talking about problems.',
+        'As President, I see leadership not as being above others but as being accountable to them: listening, working as a team, and deciding with honesty and transparency. Goodwill should have no boundaries; humanity comes before our differences.',
+        'We won’t change the world in a day. But I hope we can one day look back and know that, because of our collective efforts, somebody found support, had a better opportunity, or found life a little easier.',
+      ],
+    },
+  },
+  {
+    slug: 'avinash-kumar',
+    name: 'Avinash Kumar',
+    role: 'Secretary',
+    photo: avinashPhoto,
+    vision: {
+      quote: 'Kindness, humanity and social responsibility should guide everything we do.',
+      paragraphs: [
+        'My vision is a compassionate, inclusive and empowered society, where every individual has an equal opportunity to live with dignity, hope and happiness.',
+        'I want to help build a community where people support one another and work together for a better future. Through dedicated service, community participation and sustainable initiatives, our aim is to bring positive change and make a real difference in people’s lives.',
+        'My ultimate dream is for Goodwill Global Foundation to become a recognized and respected organization that reaches people across communities and regions, transforming lives through compassion, service and empowerment.',
+      ],
+    },
+  },
 ];
 
+/** Everyone shown in the leadership grid: directors first, then office bearers. */
 export const everyone: Person[] = [...boardOfDirectors, ...officeBearers];
